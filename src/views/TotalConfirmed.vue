@@ -1,7 +1,12 @@
 <template>
     <div class='wrapper'>
+        <el-aside>
+            <el-button type="primary" icon="el-icon-arrow-left" controls-position="left" onclick="javascrtpt:window.location.href='http://68.79.51.139:8888/cure'">上一页</el-button>
+        </el-aside>
+
         <div id="nav">
             <h1>累计确诊人数</h1>
+            <router-link to="/">累计确诊人数</router-link> |
             <router-link to="/NewConfirmed">新增确诊人数</router-link> |
             <router-link to="/TotalDeath">累计死亡人数</router-link>
         </div>
@@ -140,5 +145,15 @@
         border: 1px solid #eeeeee;
         /* background: url(../../public/static/bg.png) no-repeat; 背景图设置*/
         background-size: 100% 100%;
+    }
+
+    .el-header {
+        background-color: #B3C0D1;
+        color: #333;
+        line-height: 60px;
+    }
+
+    .el-aside {
+        color: #333;
     }
 </style>

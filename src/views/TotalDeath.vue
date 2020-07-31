@@ -3,7 +3,8 @@
         <div id="nav">
             <h1>累计死亡人数</h1>
             <router-link to="/">累计确诊人数</router-link> |
-            <router-link to="/NewConfirmed">新增确诊人数</router-link>
+            <router-link to="/NewConfirmed">新增确诊人数</router-link> |
+            <router-link to="/TotalDeath">累计死亡人数</router-link>
         </div>
         <div class='chart' id='chart'></div>
     </div>
