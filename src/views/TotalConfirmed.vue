@@ -1,8 +1,5 @@
 <template>
     <div class='wrapper'>
-        <el-aside>
-            <el-button type="primary" icon="el-icon-arrow-left" controls-position="left" onclick="javascrtpt:window.location.href='http://68.79.51.139:8888/cure'">上一页</el-button>
-        </el-aside>
 
         <div id="nav">
             <h1>累计确诊人数</h1>
@@ -41,7 +38,7 @@
         methods: {
             getWorld (data) {
                 var _this = this
-                axios.get('http://68.79.51.139:8888/echart/totalConfirmed').then(function (resp) {
+                axios.get('/echart/totalConfirmed').then(function (resp) {
                     console.log(resp)
                     let dataArr = resp.data
                     _this.drawChart(dataArr)

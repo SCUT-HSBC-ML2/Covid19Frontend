@@ -1,5 +1,6 @@
 <template>
     <div class='wrapper'>
+
         <div id="nav">
             <h1>新增确诊人数</h1>
             <router-link to="/">累计确诊人数</router-link> |
@@ -37,7 +38,7 @@
         methods: {
             getWorld (data) {
                 var _this = this
-                axios.get('http://68.79.51.139:8888/echart/newConfirmed').then(function (resp) {
+                axios.get('/echart/newConfirmed').then(function (resp) {
                     console.log(resp)
                     let dataArr = resp.data
                     _this.drawChart(dataArr)
@@ -83,7 +84,7 @@
                     // 视觉映射组件
                     visualMap: {
                         min: 0,
-                        max: 50000,
+                        max: 10000,
                         text:['max','min'],
                         realtime: false,
                         calculable: true,
